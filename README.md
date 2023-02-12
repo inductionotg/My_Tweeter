@@ -1,7 +1,7 @@
 # RequireMents
 - Users should be able to create a post
-    - [The post/tweet cannot be more than 250 chars]
-    - [ Every Post/tweet will be having support for image upload]
+    - [ The post/tweet cannot be more than 250 chars ]
+    - [ Every Post/tweet will be having support for image upload ]
 
 - Any post should be visible to all those users who follows the author
 - Anyone who follows you can comment on a post/tweet
@@ -18,3 +18,4 @@
 
 - Pagination on tweets
 - User auth
+- Every Tweet might be having a hastag
