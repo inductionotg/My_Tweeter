@@ -28,7 +28,7 @@ const startAndSetupServer = async() =>{
         */
         
         const res = await tweeto.create({
-            content:'hello #fuck #ritesh #badrealtionship #novalue'
+            content:'#GOAT #BGT #bgt #goat India?'
         })
         
        console.log(res)
