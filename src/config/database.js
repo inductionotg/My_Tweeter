@@ -1,8 +1,6 @@
-const mongoose = require('mongoose')
-const {MONGO_URL} = require('./config')
-console.log(MONGO_URL)
-const connect = async() =>{
-    await mongoose.connect(MONGO_URL);
+import  mongoose from 'mongoose'
+import  configuration  from './config.js'
+export const connect = async() =>{
+    await mongoose.connect( configuration .MONGO_URL);
 }
 
-module.exports = connect;

@@ -1,9 +1,11 @@
-const dotenv = require('dotenv')
+import  config  from "dotenv"
+import  dotenv from 'dotenv'
 
 dotenv.config()
 
-module.exports={
+const connection={
     PORT : process.env.PORT,
     MONGO_URL : process.env.MONGO_URL
 }
+export default connection
 

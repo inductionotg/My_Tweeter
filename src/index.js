@@ -1,37 +1,37 @@
-const express = require('express')
+import  express from 'express'
 
 const app = express()
 
-const { PORT } = require('./config/config')
-const connect = require('./config/database')
+import configuration  from './config/config.js'
+import {connect} from './config/database.js'
 
-const TweetService = require('./service/tweet-service') 
+import TweetService from './service/tweet-service.js' 
 const tweeto = new TweetService()
+/*
 const tweet = new TweetService()
 const Tweet = require('./models/tweet')
 const HashTagRepository = require('./repository/hashtag-repository')
 const hash = new HashTagRepository()
+*/
 const startAndSetupServer = async() =>{
 
-    app.listen(PORT, async()=>{
-        console.log('Server started on',`${PORT}`)
+    app.listen(configuration.PORT, async()=>{
+        console.log(configuration)
+        console.log('Server started on',`${configuration.PORT}`)
         await connect()
         console.log('Mongo connected')
-        const res =await  tweeto.create({
-            content:'Is #working #tweet #virat #rohit'
-        })
-        console.log(res)
+       
         /*
         let res = await hash.findByName(['bgt1'])
         res = res.map((tag)=>tag.title)
         console.log("uui",res)
         */
-        /*
-        const res = await tweet.create({
-            content:'hello #ritesh #badrealtionship #novalue'
+        
+        const res = await tweeto.create({
+            content:'hello #fuck #ritesh #badrealtionship #novalue'
         })
-        */
-       // console.log(res)
+        
+       console.log(res)
        /*
        const res=await Tweet.find({
         content:['hello India,#BGT','Hello']
