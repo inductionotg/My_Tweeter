@@ -6,7 +6,7 @@ export const createTweet = async(req,res) => {
         return res.status(201).json({
             success:true,
             message:'Successfully created the tweet',
-            data : {response},
+            data : response,
             err :{} 
         })
     } catch (error) {
