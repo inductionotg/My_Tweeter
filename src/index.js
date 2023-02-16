@@ -29,19 +29,21 @@ const startAndSetupServer = async() =>{
         console.log('Server started on',`${configuration.PORT}`)
         await connect()
         console.log('Mongo connected')
+        /*
         const twettAll =await tweetAll.getAll(0,10)
-        console.log("tweetAll",twettAll)
+        console.log("tweetAll",twettAll)*/
         /*
         const res = await user.create({
             name:"ritesh",
             email:"ritesh7w5620f0011.sinha@gmail.com",
             password:"ritesh123"
         })*/
+        /*
         const res = await user.get('63ecf1a86f63e480a7e86fc7')
         console.log("UserObject",res)
         const likerES = await like.toggleLike(twettAll[0].id,'Tweet',res.id)
         console.log("likerEs OBJ",likerES)
-       
+       */
         /*
         let res = await hash.findByName(['bgt1'])
         res = res.map((tag)=>tag.title)
